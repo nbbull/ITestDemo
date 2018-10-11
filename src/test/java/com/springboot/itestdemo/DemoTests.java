@@ -1,10 +1,9 @@
 package com.springboot.itestdemo;
 
 import org.junit.Test;
-import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
-public class ITestDemo {
+public class DemoTests {
 
 	@Test
 	public void testIndex() {
@@ -20,13 +19,4 @@ public class ITestDemo {
         System.out.println("Body:"+body);
         assertTrue(body.contains("Hello World"));
     }
-    @Test
-    public void testNotFound() {
-        String url="http://localhost:8081/notfound";
-        String body = HttpUtil.doGet(url);
-        System.out.println("Body:"+body);
-        assertNull(body);
-    }
-
-
 }
